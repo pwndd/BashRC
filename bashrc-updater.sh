@@ -24,7 +24,9 @@ cd bashRC
 ls
 echo -e "${BLUE}If you do not see the bashrc.txt file, stop the program right now with CTRL+Z! ${NC}"
 sleep "5"
-echo bashrc.txt > ~/.bashrc
+bashrc.txt > ~/.bashrc
 sleep "5"
 neofetch
-echo -e "${BLUE}Done! ${NC}"
+echo -e "${BLUE}Done! Rebooting in 5 seconds! ${NC}"
+sleep "5"
+reboot
