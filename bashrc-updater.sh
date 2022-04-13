@@ -1,32 +1,14 @@
-#Include the colors needed.
-RED='\033[1;31m'
 BLUE='\033[1;34m'
-GREEN='\033[1;32m'
-NC='\033[0m' # No Color
-
 clear #Starting with a clean slate
 echo -e "${BLUE}Welcome to the bashRC updating utility! ${NC}" #Intro Text, To welcome you guys!
 sleep "1"
 echo -e "${BLUE}Starting in 5 seconds! ${NC}" #Intro Text, To welcome you guys!
 sleep "5"
-
-#gonna update first
-clear
-sudo pacman -S neofetch nano starship git
-sudo pacman -Syy
-sudo pacman -Syu
-
-#start
-neofetch
-sleep "2.5"
-git clone https://github.com/pwndd/bashRC
-cd bashRC
-ls
-echo -e "${BLUE}If you do not see the bashrc.txt file, stop the program right now with CTRL+Z! ${NC}"
-sleep "5"
-bashrc.txt > ~/.bashrc
-sleep "5"
-neofetch
-echo -e "${BLUE}Done! Rebooting in 5 seconds! ${NC}"
-sleep "5"
-reboot
+echo "Make sure to update your system and install neofetch, starship, nano and git"
+echo "If these are not installed, there will be trouble"
+echo "This script is made for bash, and your current shell is "$SHELL", if you think there will be any issue, please quit the script."
+sleep "2"
+curl -fsSL https://raw.githubusercontent.com/pwndd/BashRC/main/bashrc.txt > ~/.bashrc
+source ~/.bashrc
+echo "Done"
+echo "Script made with advice from Jonte (https://jontes.page)
